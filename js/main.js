@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var swiper = new Swiper(".swiper-container", {
+  var swiper = new Swiper(".sw-visual", {
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
@@ -30,5 +30,14 @@ $(document).ready(function () {
         $(".swiper-progress-bar").eq(0).addClass("animate");
       },
     },
+  });
+  new Swiper(".sw-tech", {
+    slidesPerView: 3,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    speed: 500,
+    loop: true,
   });
 });

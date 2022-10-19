@@ -729,6 +729,54 @@ body {
 .tech {
   background: #ffcd29;
 }
+.tech > .inner {
+  padding: 170px 0;
+}
+.tech-left {
+  max-width: 1420px;
+  width: 90%;
+  height: 570px;
+  margin: 0 auto;
+}
+.tech-title {
+  position: relative;
+  font-size: 62px;
+  line-height: 1;
+  letter-spacing: -0.039em;
+}
+.tech-title::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 35px;
+  background: #bfbfbf;
+}
+.text-bold {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.tech-desc {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.tech-right {
+  position: absolute;
+  top: 140px;
+  right: -40%;
+  width: calc(50vw + 320px);
+  height: 600px;
+  overflow: visible;
+}
+
+.sw-slide {
+  position: relative;
+  display: block;
+  width: 400px;
+  height: 600px;
+  background-color: #fff;
+}
+
 /* proof */
 
 /* vision */
