@@ -733,8 +733,8 @@ body {
   padding: 170px 0;
 }
 .tech-left {
-  max-width: 1420px;
-  width: 90%;
+  position: relative;
+  display: inline-block;
   height: 570px;
   margin: 0 auto;
 }
@@ -769,14 +769,41 @@ body {
   overflow: visible;
 }
 
-.sw-slide {
+.swiper-slide {
   position: relative;
   display: block;
   width: 400px;
   height: 600px;
   background-color: #fff;
 }
-
+.sw-slide1 {
+  position: relative;
+  display: block;
+  width: 400px;
+  height: 600px;
+  background-color: #fff;
+}
+.sw-slide2 {
+  position: relative;
+  display: block;
+  width: 400px;
+  height: 600px;
+  background-color: #fff;
+}
+.sw-slide3 {
+  position: relative;
+  display: block;
+  width: 400px;
+  height: 600px;
+  background-color: #fff;
+}
+.sw-slide4 {
+  position: relative;
+  display: block;
+  width: 400px;
+  height: 600px;
+  background-color: #fff;
+}
 /* proof */
 
 /* vision */
