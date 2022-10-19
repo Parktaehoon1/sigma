@@ -123,6 +123,7 @@ body {
 
 /* header */
 .header {
+  /* position: fixed; */
   position: absolute;
   left: 0;
   top: 0;
