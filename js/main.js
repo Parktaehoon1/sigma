@@ -93,7 +93,6 @@ $(document).ready(function () {
       header.addClass("hide-white");
       mainLogo.removeClass("main-logo-active");
       mainMenu.removeClass("font-color-fff");
-
       if (oldY - scY < 0) {
         // 아래로 스크롤
         header.addClass("hide-up");
