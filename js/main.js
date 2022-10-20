@@ -74,6 +74,18 @@ $(document).ready(function () {
     });
   });
 
+  let subMenuLi = $(".sub-menu > li");
+  let subMenuLiA = $(".sub-menu > li > a");
+  console.log("submenuli", subMenuLi);
+  $.each(subMenuLi, function (index) {
+    $(this).mouseenter(function () {
+      subMenuLiA.eq(index).addClass("font-color-submenu");
+    });
+    $(this).mouseleave(function () {
+      subMenuLiA.eq(index).removeClass("font-color-submenu");
+    });
+  });
+
   let oldY;
   $(window).scroll(function () {
     scY = $(window).scrollTop();
@@ -126,8 +138,8 @@ $(document).ready(function () {
       type: "fraction",
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".sw-visual-next",
+      prevEl: ".sw-visual-prev",
     },
     on: {
       init: function () {
@@ -169,11 +181,5 @@ $(document).ready(function () {
         techList.eq(this.realIndex).addClass("progress-bar-list-active");
       },
     },
-  });
-
-  console.log("실시간으로 감시하는지?", swiperActive);
-  console.log(techList);
-  $.each(techList, function (index) {
-    // swiperActive.eq(index).
   });
 });
