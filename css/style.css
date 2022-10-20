@@ -390,6 +390,9 @@ body {
   line-height: 100px;
   padding-bottom: 60px;
 }
+.main-menu > li:hover {
+  color: #000;
+}
 .main-menu > li:hover > .main-menu-title {
   color: #fff;
 }
@@ -414,6 +417,7 @@ body {
 .main-menu-title {
   position: relative;
   display: block;
+  color: #fff;
 }
 .header-color-000 {
   color: #000 !important;
@@ -435,7 +439,7 @@ body {
 }
 
 .font-color-fff {
-  color: #fff;
+  color: #fff !important;
 }
 /* 제휴문의 */
 .header-require {

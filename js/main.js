@@ -56,6 +56,24 @@ $(document).ready(function () {
   let requireTag = $(".require > a");
   let langTag = $(".lang > span");
   let mainMenu = $(".main-menu-title");
+
+  header.mouseenter(function () {
+    mainMenu.addClass("header-color-000");
+  });
+
+  header.mouseleave(function () {
+    mainMenu.removeClass("header-color-000");
+  });
+  let mainMenuLi = $(".main-menu > li");
+  $.each(mainMenuLi, function (index, item) {
+    $(this).mouseenter(function () {
+      mainMenu.eq(index).addClass("font-color-fff");
+    });
+    $(this).mouseleave(function () {
+      mainMenu.eq(index).removeClass("font-color-fff");
+    });
+  });
+
   let oldY;
   $(window).scroll(function () {
     scY = $(window).scrollTop();
@@ -69,26 +87,29 @@ $(document).ready(function () {
         header.addClass("hide-up");
         mainLogo.removeClass("main-logo-active");
         header.removeClass("header-active");
-        mainMenu.addClass("font-color-fff");
+        // mainMenu.addClass("font-color-fff");
         requireTag.removeClass("require-active");
         langTag.removeClass("lang-active");
+        $(".main-menu-title").addClass("header-color-000");
       } else {
         // 위로 스크롤
         header.removeClass("hide-up");
-        mainMenu.removeClass("font-color-fff");
+        // mainMenu.removeClass("font-color-fff");
         header.addClass("header-active");
         mainLogo.addClass("main-logo-active");
         requireTag.addClass("require-active");
         langTag.addClass("lang-active");
+        // $(".main-menu-title").removeClass("header-color-000");
       }
     } else {
       header.removeClass("hide-up");
       header.removeClass("hide-white");
       header.removeClass("header-active");
       mainLogo.removeClass("main-logo-active");
-      mainMenu.addClass("font-color-fff");
+      // mainMenu.addClass("font-color-fff");
       requireTag.removeClass("require-active");
       langTag.removeClass("lang-active");
+      $(".main-menu-title").removeClass("header-color-000");
     }
     oldY = scY;
   });
