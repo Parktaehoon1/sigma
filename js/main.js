@@ -48,28 +48,47 @@ $(document).ready(function () {
       1000
     );
   });
+
   // 헤더 관련
   let header = $(".header");
+  let mainLogo = $(".main-logo > a");
   let scY = $(window).scrollTop();
+  let requireTag = $(".require > a");
+  let langTag = $(".lang > span");
+  let mainMenu = $(".main-menu-title");
   let oldY;
   $(window).scroll(function () {
     scY = $(window).scrollTop();
     if (scY > 101) {
-      header.addClass("hide");
       header.addClass("hide-white");
-      $(".main-menu > li").addClass("hide-color-000");
+      mainLogo.removeClass("main-logo-active");
+      mainMenu.removeClass("font-color-fff");
+
       if (oldY - scY < 0) {
         // 아래로 스크롤
         header.addClass("hide-up");
+        mainLogo.removeClass("main-logo-active");
+        header.removeClass("header-active");
+        mainMenu.addClass("font-color-fff");
+        requireTag.removeClass("require-active");
+        langTag.removeClass("lang-active");
       } else {
         // 위로 스크롤
         header.removeClass("hide-up");
+        mainMenu.removeClass("font-color-fff");
+        header.addClass("header-active");
+        mainLogo.addClass("main-logo-active");
+        requireTag.addClass("require-active");
+        langTag.addClass("lang-active");
       }
     } else {
       header.removeClass("hide-up");
-      header.removeClass("hide");
       header.removeClass("hide-white");
-      $(".main-menu > li").removeClass("hide-color-000");
+      header.removeClass("header-active");
+      mainLogo.removeClass("main-logo-active");
+      mainMenu.addClass("font-color-fff");
+      requireTag.removeClass("require-active");
+      langTag.removeClass("lang-active");
     }
     oldY = scY;
   });

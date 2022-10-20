@@ -337,6 +337,16 @@ body {
   max-width: 1820px;
   margin: 0 auto;
 }
+.hide-up {
+  transform: translateY(-200px);
+}
+.hide-white {
+}
+.hide-color-000 {
+}
+.header-active {
+  background: #fff;
+}
 /* 메인로고 */
 .main-logo {
   position: relative;
@@ -394,13 +404,17 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  background: transparent;
+}
+
+.main-menu > li:hover::before {
   background: #104f9f;
 }
+
 .main-menu-title {
   position: relative;
   display: block;
 }
-
 .header-color-000 {
   color: #000 !important;
 }
@@ -418,6 +432,10 @@ body {
   display: block;
   line-height: 2.5;
   font-size: 16px;
+}
+
+.font-color-fff {
+  color: #fff;
 }
 /* 제휴문의 */
 .header-require {
@@ -493,6 +511,29 @@ body {
 .header:hover .header-require > .lang > span {
   background: url("../images/icon_lang_gray.svg") no-repeat;
   color: #989898;
+}
+.header:hover .main-logo > a {
+  position: relative;
+  display: block;
+  width: 265px;
+  height: 45px;
+  background: url("../images/header_logo_b.svg") no-repeat center;
+  background-size: cover;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.require-active {
+  border: 1px solid #104f9f !important;
+  color: #104f9f !important;
+}
+.require-active::after {
+  background: url("../images/btn_apply_arr_blue.svg") no-repeat 0 50% !important;
+}
+
+.lang-active {
+  background: url("../images/icon_lang_gray.svg") no-repeat !important;
+  color: #989898 !important;
 }
 
 /* visual */
